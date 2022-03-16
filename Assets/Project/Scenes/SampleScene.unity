@@ -1834,11 +1834,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &852250063
 MonoBehaviour:
@@ -1855,7 +1855,7 @@ MonoBehaviour:
   groundCheck: {fileID: 259929144}
   isGround: 1
   speed: 4
-  jumpForce: 300
+  jumpForce: 500
 --- !u!1 &879902657
 GameObject:
   m_ObjectHideFlags: 0

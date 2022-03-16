@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
   private bool facingRight = true;
 
   private bool isJumpActive = false;
-  private int numbersOfJump = 0;
-  private int limitOfJumps = 2;
+  private int numberOfJumps = 0;
+  private int maxJumps = 2;
   [SerializeField]
   private float jumpForce;
 
@@ -63,8 +63,13 @@ public class PlayerController : MonoBehaviour
 
   void JumpPlayer() {
     if (isGround) {
+      numberOfJumps = 0;
+    }
+
+    if (isGround || numberOfJumps < maxJumps) {
       playerRigidbody2D.AddForce(new Vector2(0, jumpForce));
       isGround = false;
+      numberOfJumps++;
     }
     isJumpActive = false;
   }
