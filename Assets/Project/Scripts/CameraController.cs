@@ -9,16 +9,16 @@ public class CameraController : MonoBehaviour
   [SerializeField]
   private float offsetY = 1;
   [SerializeField]
-  private float smooth = 0.3f;
+  private float smooth = 0.1f;
 
   [SerializeField]
-  private float cameraLimitUp = 2;
+  private float cameraLimitUp;
   [SerializeField]
-  private float cameraLimitDown = 0;
+  private float cameraLimitDown;
   [SerializeField]
-  private float cameraLimitLeft = 0;
+  private float cameraLimitLeft;
   [SerializeField]
-  private float cameraLimitRight = 100;
+  private float cameraLimitRight;
 
   private Transform playerTransform;
   private float playerPosX;
