@@ -2409,6 +2409,8 @@ MonoBehaviour:
   isGround: 1
   speed: 4
   jumpForce: 500
+  fxGame: {fileID: 528429104}
+  fxJump: {fileID: 8300000, guid: e8b88aef2fd91f04ab7b76989fb5ea61, type: 3}
 --- !u!1 &879902657
 GameObject:
   m_ObjectHideFlags: 0

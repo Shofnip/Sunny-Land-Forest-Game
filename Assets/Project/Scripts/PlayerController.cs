@@ -7,12 +7,9 @@ public class PlayerController : MonoBehaviour
   private Animator playerAnimator;
   private Rigidbody2D playerRigidbody2D;
 
-  [SerializeField]
-  private Transform groundCheck;
-  [SerializeField]
-  private bool isGround = false;
-  [SerializeField]
-  private float speed;
+  [SerializeField] private Transform groundCheck;
+  [SerializeField] private bool isGround = false;
+  [SerializeField] private float speed;
 
   private float touchRun = 0.0f;
 
@@ -21,10 +18,12 @@ public class PlayerController : MonoBehaviour
   private bool isJumpActive = false;
   private int numberOfJumps = 0;
   private int maxJumps = 2;
-  [SerializeField]
-  private float jumpForce;
+  [SerializeField] private float jumpForce;
 
   private GameController gameController;
+
+  [SerializeField] private AudioSource fxGame;
+  [SerializeField] private AudioClip fxJump;
 
   void Start()
   {
@@ -71,6 +70,7 @@ public class PlayerController : MonoBehaviour
       playerRigidbody2D.AddForce(new Vector2(0, jumpForce));
       isGround = false;
       numberOfJumps++;
+      fxGame.PlayOneShot(fxJump);
     }
     isJumpActive = false;
   }
