@@ -24,14 +24,15 @@ public class PlayerController : MonoBehaviour
   [SerializeField]
   private float jumpForce;
 
-  // Start is called before the first frame update
+  private GameController gameController;
+
   void Start()
   {
     playerAnimator = GetComponent<Animator>();
     playerRigidbody2D = GetComponent<Rigidbody2D>();
+    gameController = FindObjectOfType<GameController>();
   }
 
-  // Update is called once per frame
   void Update()
   {
     isGround = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
@@ -84,5 +85,16 @@ public class PlayerController : MonoBehaviour
   {
     playerAnimator.SetBool("isWalking", playerRigidbody2D.velocity.x != 0 && isGround);
     playerAnimator.SetBool("isJumping", !isGround);
+  }
+
+  void OnTriggerEnter2D(Collider2D collider) {
+    switch (collider.gameObject.tag) {
+      case "Collectible":
+        gameController.AddScore(1);
+        Destroy(collider.gameObject);
+        break;
+      default:
+        return;
+    }
   }
 }
