@@ -2637,7 +2637,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1390503708}
   - {fileID: 99379116}
-  speed: 3.5
+  speed: 2
 --- !u!4 &916700458
 Transform:
   m_ObjectHideFlags: 0
@@ -2985,7 +2985,7 @@ GameObject:
   - component: {fileID: 1057250121}
   m_Layer: 7
   m_Name: Bee
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16881,7 +16881,7 @@ GameObject:
   - component: {fileID: 1634031944}
   m_Layer: 7
   m_Name: Bee
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16999,9 +16999,10 @@ GameObject:
   - component: {fileID: 1786936013}
   - component: {fileID: 1786936016}
   - component: {fileID: 1786936015}
+  - component: {fileID: 1786936017}
   m_Layer: 7
   m_Name: Slug
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17100,10 +17101,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.058071673, y: -0.12333584}
+  m_Offset: {x: -0.06484032, y: 0.31324306}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17114,7 +17115,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3638462, y: 1.0658283}
+  m_Size: {x: 0.9915695, y: 0.05729705}
   m_EdgeRadius: 0
 --- !u!50 &1786936016
 Rigidbody2D:
@@ -17137,6 +17138,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!61 &1786936017
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786936011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06261009, y: -0.18613827}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.3125}
+    newSize: {x: 2, y: 1.3125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3738984, y: 0.94022346}
+  m_EdgeRadius: 0
 --- !u!1 &1832138086
 GameObject:
   m_ObjectHideFlags: 0

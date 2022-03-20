@@ -93,6 +93,13 @@ public class PlayerController : MonoBehaviour
         gameController.AddScore(1);
         Destroy(collider.gameObject);
         break;
+      case "Enemy":
+        Rigidbody2D rb = GetComponentInParent<Rigidbody2D>();
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.AddForce(new Vector2(0, 600));
+
+        Destroy(collider.gameObject);
+        break;
       default:
         return;
     }
