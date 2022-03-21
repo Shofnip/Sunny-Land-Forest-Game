@@ -16658,6 +16658,7 @@ MonoBehaviour:
   txtScore: {fileID: 113201483}
   fxGame: {fileID: 528429104}
   fxCollectCarrot: {fileID: 8300000, guid: cfe2d026dc86c9f4fbbbde933ba68994, type: 3}
+  fxHitMonster: {fileID: 8300000, guid: 7de3db4a120e693409e017a4da7ad475, type: 3}
 --- !u!4 &1508745003
 Transform:
   m_ObjectHideFlags: 0
@@ -19519,6 +19520,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &871232139377874639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.8829396
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0663285
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579030000143977246, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096239595238843290, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
+      propertyPath: m_Name
+      value: EnemyDeath
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d9d2d41caeeb18c43ad746efa12d39d3, type: 3}
 --- !u!1001 &986661361641375919
 PrefabInstance:
   m_ObjectHideFlags: 0

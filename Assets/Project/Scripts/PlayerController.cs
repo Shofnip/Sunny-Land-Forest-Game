@@ -94,9 +94,14 @@ public class PlayerController : MonoBehaviour
         Destroy(collider.gameObject);
         break;
       case "Enemy":
+        GameObject enemyExplosion = Instantiate(gameController.enemyDeathPrefab, collider.transform.position, collider.transform.localRotation);
+        Destroy(enemyExplosion, 0.5f);
+
         Rigidbody2D rb = GetComponentInParent<Rigidbody2D>();
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(new Vector2(0, 600));
+
+        gameController.fxGame.PlayOneShot(gameController.fxHitMonster);
 
         Destroy(collider.gameObject);
         break;
