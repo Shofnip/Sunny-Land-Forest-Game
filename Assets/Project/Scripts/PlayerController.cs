@@ -127,6 +127,18 @@ public class PlayerController : MonoBehaviour
       case "Enemy":
         Hurt();
         break;
+      case "Platform":
+        transform.parent = collider.transform;
+      break;
+    }
+  }
+
+  void OnCollisionExit2D (Collision2D collider) {
+    switch (collider.gameObject.tag)
+    {
+      case "Platform":
+        transform.parent = null;
+      break;
     }
   }
 
