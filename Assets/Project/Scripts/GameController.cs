@@ -5,18 +5,30 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    private int score;
-    [SerializeField] private Text txtScore;
+  [SerializeField] private Text txtScore;
+  [SerializeField] public GameObject enemyDeathPrefab;
+  [SerializeField] private AudioSource fxGame;
+  [SerializeField] private AudioClip fxCollectCarrot;
+  [SerializeField] private AudioClip fxHitMonster;
+  [SerializeField] private AudioClip fxDie;
+  [SerializeField] private Image lifebar;
+  [SerializeField] private Sprite[] lifebarImages;
 
-    [SerializeField] public GameObject enemyDeathPrefab;
+  private int score;
 
-    [SerializeField] public AudioSource fxGame;
-    [SerializeField] private AudioClip fxCollectCarrot;
-    [SerializeField] public AudioClip fxHitMonster;
+  public AudioSource FxGame { get => fxGame; }
+  public AudioClip FxHitMonster { get => fxHitMonster; }
+  public AudioClip FxDie { get => fxDie; }
 
-    public void AddScore (int qntToAdd) {
-        score += qntToAdd;
-        txtScore.text = score.ToString();
-        fxGame.PlayOneShot(fxCollectCarrot);
-    }
+  public void AddScore(int qntToAdd)
+  {
+    score += qntToAdd;
+    txtScore.text = score.ToString();
+    fxGame.PlayOneShot(fxCollectCarrot);
+  }
+
+  public void ChangeLifebar(int playerLife)
+  {
+    lifebar.sprite = lifebarImages[playerLife];
+  }
 }
